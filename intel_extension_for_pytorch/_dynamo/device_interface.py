@@ -75,7 +75,7 @@ class XPUInterface(DeviceInterface):
         dev_capability["vendor"] = dev_property.vendor
         dev_capability["driver_version"] = dev_property.driver_version
         dev_capability["version"] = dev_property.version
-        dev_capability["backend_version"] = dev_property.backend_version
+        # dev_capability["backend_version"] = dev_property.backend_version
         dev_capability["is_available"] = dev_property.is_available
         dev_capability["global_mem_size"] = dev_property.total_memory
         dev_capability["max_compute_units"] = dev_property.max_compute_units

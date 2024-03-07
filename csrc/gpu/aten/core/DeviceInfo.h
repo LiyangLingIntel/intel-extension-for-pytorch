@@ -24,7 +24,7 @@ struct DeviceInfo {
   std::string vendor;
   std::string driver_version;
   std::string version;
-  std::string backend_version;
+  // std::string backend_version;
   bool is_available;
   uint64_t global_mem_size;
   uint32_t max_compute_units;

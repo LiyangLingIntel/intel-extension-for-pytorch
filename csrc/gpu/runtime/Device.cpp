@@ -237,7 +237,7 @@ static void initDeviceProperty(DeviceId device_id) {
   device_prop.vendor = device.get_info<dpcpp_dev_vendor>();
   device_prop.driver_version = device.get_info<dpcpp_dev_driver_version>();
   device_prop.version = device.get_info<dpcpp_dev_version>();
-  device_prop.backend_version = device.get_info<dpcpp_dev_backend_version>();
+  // device_prop.backend_version = device.get_info<dpcpp_dev_backend_version>();
   device_prop.is_available = device.get_info<dpcpp_dev_is_available>();
   device_prop.max_param_size = device.get_info<dpcpp_dev_max_param_size>();
   device_prop.max_compute_units =
@@ -344,7 +344,7 @@ static void initDeviceProperty(DeviceId device_id) {
   dev_info.vendor = device_prop.vendor;
   dev_info.driver_version = device_prop.driver_version;
   dev_info.version = device_prop.version;
-  dev_info.backend_version = device_prop.backend_version;
+  // dev_info.backend_version = device_prop.backend_version;
   dev_info.is_available = device_prop.is_available;
   dev_info.global_mem_size = device_prop.global_mem_size;
   dev_info.max_compute_units = device_prop.max_compute_units;

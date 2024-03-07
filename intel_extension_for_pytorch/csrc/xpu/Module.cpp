@@ -567,7 +567,7 @@ static void register_xpu_device_info(PyObject* module) {
       .def_readonly("vendor", &DeviceInfo::vendor)
       .def_readonly("driver_version", &DeviceInfo::driver_version)
       .def_readonly("version", &DeviceInfo::version)
-      .def_readonly("backend_version", &DeviceInfo::backend_version)
+      // .def_readonly("backend_version", &DeviceInfo::backend_version)
       .def_readonly("is_available", &DeviceInfo::is_available)
       .def_readonly("total_memory", &DeviceInfo::global_mem_size)
       .def_readonly("max_compute_units", &DeviceInfo::max_compute_units)
