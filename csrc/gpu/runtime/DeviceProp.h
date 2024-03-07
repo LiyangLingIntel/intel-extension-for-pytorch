@@ -15,8 +15,7 @@ struct DeviceProp {
   dpcpp_info_t<sycl::info::device, dpcpp_dev_vendor> vendor;
   dpcpp_info_t<sycl::info::device, dpcpp_dev_driver_version> driver_version;
   dpcpp_info_t<sycl::info::device, dpcpp_dev_version> version;
-  // dpcpp_info_t<sycl::info::device, dpcpp_dev_backend_version>
-  // backend_version;
+  dpcpp_info_t<sycl::info::device, dpcpp_dev_backend_version> backend_version;
   dpcpp_info_t<sycl::info::device, dpcpp_dev_is_available> is_available;
   dpcpp_info_t<sycl::info::device, dpcpp_dev_max_param_size> max_param_size;
   dpcpp_info_t<sycl::info::device, dpcpp_dev_max_compute_units>
@@ -93,7 +92,7 @@ struct DeviceProp {
   dpcpp_info_t<dpcpp_dev_vendor> vendor;
   dpcpp_info_t<dpcpp_dev_driver_version> driver_version;
   dpcpp_info_t<dpcpp_dev_version> version;
-  // dpcpp_info_t< dpcpp_dev_backend_version> backend_version;
+  dpcpp_info_t<dpcpp_dev_backend_version> backend_version;
   dpcpp_info_t<dpcpp_dev_is_available> is_available;
   dpcpp_info_t<dpcpp_dev_max_param_size> max_param_size;
   dpcpp_info_t<dpcpp_dev_max_compute_units> max_compute_units;

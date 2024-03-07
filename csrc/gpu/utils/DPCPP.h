@@ -172,8 +172,10 @@ using dpcpp_dev_driver_version = sycl::info::device::driver_version;
 // <major_version>.<minor_version>
 using dpcpp_dev_version = sycl::info::device::version;
 // Returns a string describing the version of the SYCL backend associated with
-// the device. static constexpr auto dpcpp_dev_backend_version =
-// sycl::info::device::backend_version; Returns true if the SYCL device is
+// the device.
+static constexpr auto dpcpp_dev_backend_version =
+    sycl::info::device::backend_version;
+// Returns true if the SYCL device is
 // available and returns false if the device is not available.
 using dpcpp_dev_is_available = sycl::info::device::is_available;
 // Returns the maximum size in bytes of the arguments that can be passed to a
