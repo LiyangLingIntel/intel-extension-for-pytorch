@@ -66,24 +66,4 @@ class XPUInterface(DeviceInterface):
     @staticmethod
     def get_compute_capability(device: _device_t = None) -> dict:
         # currently, torch.xpu.get_device_capability returns a dict
-        dev_property = torch.xpu.get_device_properties(device)
-        print(dev_property)
-
-        dev_capability = {}
-        dev_capability["dev_type"] = dev_property.dev_type
-        dev_capability["dev_name"] = dev_property.name
-        dev_capability["vendor"] = dev_property.vendor
-        dev_capability["driver_version"] = dev_property.driver_version
-        dev_capability["version"] = dev_property.version
-        # dev_capability["backend_version"] = dev_property.backend_version
-        dev_capability["is_available"] = dev_property.is_available
-        dev_capability["global_mem_size"] = dev_property.total_memory
-        dev_capability["max_compute_units"] = dev_property.max_compute_units
-        dev_capability["gpu_eu_count"] = dev_property.gpu_eu_count
-        dev_capability["gpu_subslice_count"] = dev_property.gpu_subslice_count
-        dev_capability["max_work_group_size"] = dev_property.max_work_group_size
-        dev_capability["max_num_sub_groups"] = dev_property.max_num_sub_groups
-        dev_capability["sub_group_sizes"] = dev_property.sub_group_sizes
-        dev_capability["support_fp64"] = dev_property.support_fp64
-
-        return dev_capability
+        return torch.xpu.get_device_capability(device)

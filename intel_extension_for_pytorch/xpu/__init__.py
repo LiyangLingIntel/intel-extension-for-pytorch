@@ -221,9 +221,21 @@ def get_device_capability(device: Optional[_device_t] = None) -> Dict[str, Any]:
     """
     prop = get_device_properties(device)
     return {
+        "dev_type": prop.dev_type,
+        "dev_name": prop.name,
+        "platform_name": prop.platform_name,
+        "vendor": prop.vendor,
+        "driver_version": prop.driver_version,
+        "version": prop.version,
+        "is_available": prop.is_available,
+        "global_mem_size": prop.total_memory,
+        "max_compute_units": prop.max_compute_units,
+        "gpu_eu_count": prop.gpu_eu_count,
+        "gpu_subslice_count": prop.gpu_subslice_count,
         "max_work_group_size": prop.max_work_group_size,
         "max_num_sub_groups": prop.max_num_sub_groups,
         "sub_group_sizes": prop.sub_group_sizes,
+        "support_fp64": prop.support_fp64
     }
 
 
